@@ -31,7 +31,7 @@ class CrawlerAdsTxt:
     @staticmethod
     def __response_by_url(domain: str, timeout) -> requests:
         url = 'http://' + domain + '/ads.txt'
-        response = requests.get(url, timeout=timeout,allow_redirects=True)
+        response = requests.get(url, timeout=timeout, allow_redirects=True)
         return response
 
     def __find_signature_by_domain(self, domain_name, signature, timeout, data_domain):
